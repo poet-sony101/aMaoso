@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --brand-indigo: #363b94;
+    --brand-indigo-dark: #272a6e;
+    --brand-indigo-light: #4c52b8;
+    --brand-crimson: #c9313b;
+    --brand-crimson-light: #e03a45;
+    --brand-crimson-dark: #a8252e;
+    --brand-bg: #090c15;
+    --brand-card: #111524;
+  }
+
+  body {
+    background-color: #090c15;
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    text-wrap: balance;
+  }
+
+  p, li, blockquote {
+    text-wrap: pretty;
+  }
+}
+
+/* Custom scrollbar matching logo colors */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #090c15;
+}
+::-webkit-scrollbar-thumb {
+  background: #363b94;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #c9313b;
+}
+
+/* Theme Panels */
+.glass-panel {
+  background: rgba(17, 21, 36, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(54, 59, 148, 0.25);
+}
+
+.glass-card {
+  background: rgba(22, 28, 48, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+/* Gradients derived directly from logo colors (Crimson #C9313B to Indigo #363B94) */
+.gradient-text-logo {
+  background: linear-gradient(135deg, #e03a45 0%, #c9313b 40%, #5d3680 75%, #363b94 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gradient-text-crimson {
+  background: linear-gradient(135deg, #f87171 0%, #ef4444 50%, #c9313b 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.btn-brand-primary {
+  background: linear-gradient(135deg, #363b94 0%, #4349a8 100%);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+.btn-brand-primary:hover {
+  background: linear-gradient(135deg, #2a2e7a 0%, #363b94 100%);
+  box-shadow: 0 10px 25px -5px rgba(54, 59, 148, 0.4);
+}
+
+.btn-brand-accent {
+  background: linear-gradient(135deg, #c9313b 0%, #e03a45 100%);
+  color: #ffffff;
+}
+.btn-brand-accent:hover {
+  background: linear-gradient(135deg, #a8252e 0%, #c9313b 100%);
+  box-shadow: 0 10px 25px -5px rgba(201, 49, 59, 0.4);
+}
