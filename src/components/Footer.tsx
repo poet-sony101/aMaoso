@@ -158,8 +158,8 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenRFQ }) => {
 
               <div>
                 <p className="font-semibold text-slate-200">Official Email:</p>
-                <a href="mailto:admin@oled-f.com" className="text-slate-300 hover:text-white">
-                  admin@oled-f.com
+                <a href={`mailto:${COMPANY_INFO.email}`} className="text-slate-300 hover:text-white">
+                  {COMPANY_INFO.email}
                 </a>
               </div>
             </div>

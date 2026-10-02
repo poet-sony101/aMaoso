@@ -88,8 +88,8 @@ export const ContactSection: React.FC = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <Mail className="w-4 h-4 text-[#363b94] shrink-0" />
-                  <a href="mailto:admin@oled-f.com" className="hover:text-[#e03a45] text-slate-300">
-                    admin@oled-f.com
+                  <a href={`mailto:${COMPANY_INFO.email}`} className="hover:text-[#e03a45] text-slate-300">
+                    {COMPANY_INFO.email}
                   </a>
                 </div>
               </div>

@@ -295,7 +295,7 @@ export const COMPANY_INFO = {
   phonePrimary: '09020008868',
   phoneSecondary: '08034096635',
   whatsappDirect: '2349020008868',
-  email: 'admin@oled-f.com',
+  email: 'obasi8868@gmail.com',
   locations: [
     {
       title: 'Lagos Head Office',
