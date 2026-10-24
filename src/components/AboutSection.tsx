@@ -1,5 +1,5 @@
 import React from 'react';
-import { Globe2, CheckCircle2, Building } from 'lucide-react';
+import { Globe2, CheckCircle2, Building, ShieldCheck, MapPin } from 'lucide-react';
 
 export const AboutSection: React.FC = () => {
   return (
@@ -44,11 +44,15 @@ export const AboutSection: React.FC = () => {
               </p>
             </div>
 
-            {/* Core Capabilities from amaoso.com */}
+            {/* Core Capabilities from amaoso.com & NDDC Certification */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-2 text-xs font-semibold text-slate-200">
               <div className="flex items-center space-x-2 p-2.5 rounded-lg bg-[#111524] border border-[#363b94]/40">
                 <CheckCircle2 className="w-4 h-4 text-[#e03a45] shrink-0" />
                 <span>ISO9001:2015 Quality Management System</span>
+              </div>
+              <div className="flex items-center space-x-2 p-2.5 rounded-lg bg-emerald-950/40 border border-emerald-500/40 text-emerald-300">
+                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>NDDC Approved Product Standard</span>
               </div>
               <div className="flex items-center space-x-2 p-2.5 rounded-lg bg-[#111524] border border-[#363b94]/40">
                 <CheckCircle2 className="w-4 h-4 text-[#e03a45] shrink-0" />
@@ -58,10 +62,21 @@ export const AboutSection: React.FC = () => {
                 <CheckCircle2 className="w-4 h-4 text-[#e03a45] shrink-0" />
                 <span>Specialized Lighting Testing Workshop</span>
               </div>
-              <div className="flex items-center space-x-2 p-2.5 rounded-lg bg-[#111524] border border-[#363b94]/40">
+              <div className="flex items-center space-x-2 p-2.5 rounded-lg bg-[#111524] border border-[#363b94]/40 sm:col-span-2">
                 <CheckCircle2 className="w-4 h-4 text-[#e03a45] shrink-0" />
-                <span>Well-Stocked Inventory in Lagos & Warri</span>
+                <span>Stocked Regional Hubs: Lagos (Mende) & Warri (Delta)</span>
               </div>
+            </div>
+
+            {/* NDDC & Community Deployments Card */}
+            <div className="p-4 rounded-xl bg-gradient-to-r from-emerald-950/40 to-[#111524] border border-emerald-500/30 space-y-2">
+              <div className="flex items-center space-x-2 text-emerald-400 font-bold text-xs uppercase tracking-wider">
+                <ShieldCheck className="w-4 h-4 text-emerald-400" />
+                <span>NDDC Approval & Niger Delta Community Lighting</span>
+              </div>
+              <p className="text-xs text-slate-300 leading-relaxed">
+                aMaoso lighting systems are <strong>NDDC approved</strong> and have been actively installed across diverse communities in <strong className="text-white">Akwa Ibom</strong>, <strong className="text-white">Rivers</strong>, and <strong className="text-white">Delta State</strong>. Our anti-corrosion die-cast aluminum housings and high-capacity LiFePO4 batteries ensure reliable illumination in tropical coastal environments.
+              </p>
             </div>
 
             {/* African Export Countries */}

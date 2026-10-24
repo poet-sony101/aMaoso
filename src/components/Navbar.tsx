@@ -48,8 +48,9 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenRFQ, onNavigate }) => {
               Lagos Amaoso Solar Technology Co., Ltd.
             </span>
             <span className="text-slate-600">|</span>
-            <span className="text-slate-300">
-              Daily Capacity: <strong className="text-white">5,000–10,000 Units</strong>
+            <span className="text-emerald-400 font-bold flex items-center text-[11px]">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 mr-1.5 animate-pulse" />
+              NDDC Approved • Akwa Ibom, Rivers & Delta Communities
             </span>
           </div>
 

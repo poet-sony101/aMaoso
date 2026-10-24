@@ -58,13 +58,13 @@ export const ProductCatalog: React.FC<ProductCatalogProps> = ({ onSelectProductF
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-[#363b94]/20 border border-[#363b94]/50 text-[#e03a45] text-xs font-bold uppercase tracking-wider">
             <Sun className="w-3.5 h-3.5 text-[#363b94]" />
-            <span>Official Product Line</span>
+            <span>Official Product Line • NDDC Approved</span>
           </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white font-['Space_Grotesk'] tracking-tight">
             Our Products
           </h2>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            High-quality LED streetlights, floodlights, industrial & mining lights, and solar lighting solutions with Class A LiFePO4 batteries and Bridgelux LED chips.
+            NDDC approved high-efficiency solar streetlights, floodlights, and industrial luminaires with Class A LiFePO4 batteries, proven in community installations across Akwa Ibom, Rivers, and Delta State.
           </p>
         </div>
 

@@ -69,6 +69,9 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenRFQ }) => {
             </p>
 
             <div className="pt-2 flex flex-wrap gap-2 text-[11px]">
+              <span className="px-2.5 py-1 rounded-md bg-emerald-950/60 border border-emerald-500/50 text-emerald-300 font-semibold">
+                NDDC Approved
+              </span>
               <span className="px-2.5 py-1 rounded-md bg-[#111524] border border-[#363b94]/50 text-[#e03a45] font-semibold">
                 ISO 9001:2015
               </span>
@@ -151,6 +154,7 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenRFQ }) => {
               <div>
                 <p className="font-semibold text-slate-200">Warri Regional Depot:</p>
                 <p className="text-[11px] text-slate-400">64 Airport Road, Effurun, Warri, Delta</p>
+                <p className="text-[10px] text-emerald-400 font-medium">Serving Delta, Rivers & Akwa Ibom</p>
                 <a href="tel:08034096635" className="text-[#e03a45] font-bold hover:underline block mt-0.5">
                   0803 409 6635
                 </a>

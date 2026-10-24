@@ -102,7 +102,7 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onQuoteWithSpe
             Solar Lighting Sizing & Wattage Estimator
           </h2>
           <p className="text-slate-300 text-base sm:text-lg leading-relaxed">
-            Quickly estimate recommended pole spacing, required wattage, battery autonomy, and luminaire models for Nigerian road, estate, or facility projects.
+            Quickly estimate recommended pole spacing, required wattage, battery autonomy, and luminaire models for NDDC community tenders and Nigerian infrastructure projects.
           </p>
         </div>
 

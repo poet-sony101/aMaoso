@@ -9,7 +9,8 @@ import {
   Send, 
   CheckCircle,
   Building2,
-  Warehouse
+  Warehouse,
+  ShieldCheck
 } from 'lucide-react';
 
 export const ContactSection: React.FC = () => {
@@ -105,6 +106,7 @@ export const ContactSection: React.FC = () => {
                   <div>
                     <h3 className="text-base font-bold text-white">Warri Warehouse</h3>
                     <p className="text-xs text-[#e03a45] font-medium">South-South Logistics Hub</p>
+                    <p className="text-[11px] text-emerald-400 font-semibold mt-0.5">NDDC Approved Community Supply Hub</p>
                   </div>
                 </div>
                 <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-[#363b94]/30 text-white">
@@ -126,6 +128,10 @@ export const ContactSection: React.FC = () => {
                 <div className="flex items-center space-x-2">
                   <Clock className="w-4 h-4 text-slate-400 shrink-0" />
                   <span>Monday - Saturday: 8:00 AM – 6:00 PM</span>
+                </div>
+                <div className="pt-2 border-t border-[#363b94]/30 text-[11px] text-slate-400 flex items-center space-x-1.5">
+                  <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                  <span>Direct stock & logistics for Akwa Ibom, Rivers, and Delta State community installations.</span>
                 </div>
               </div>
             </div>
@@ -230,6 +236,8 @@ export const ContactSection: React.FC = () => {
                     >
                       <option value="Lagos">Lagos State / Head Office</option>
                       <option value="Delta/Warri">Delta State / Warri Warehouse</option>
+                      <option value="Akwa Ibom">Akwa Ibom State (Community / Urban)</option>
+                      <option value="Rivers">Rivers State (Port Harcourt / Rural)</option>
                       <option value="Other Nigeria">Other Nigerian State</option>
                       <option value="African Export">African Export (Kenya, Ghana, etc.)</option>
                     </select>

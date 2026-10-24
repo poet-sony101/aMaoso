@@ -208,7 +208,7 @@ export const RFQModal: React.FC<RFQModalProps> = ({
               {/* Trust Badge */}
               <div className="flex items-center space-x-2 text-[11px] text-slate-400 bg-slate-900/60 p-2.5 rounded-lg border border-slate-800">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
-                <span>All quotes are verified against authentic factory inventory in Maryland Lagos or Effurun Warri.</span>
+                <span>NDDC Approved. Verified factory inventory in Maryland Lagos and Effurun Warri for rapid delivery across Akwa Ibom, Rivers & Delta.</span>
               </div>
 
               {/* Actions */}

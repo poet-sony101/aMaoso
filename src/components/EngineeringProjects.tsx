@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { PROJECT_PHOTOS } from '../data/products';
-import { ArrowRight, X, ZoomIn } from 'lucide-react';
+import { ArrowRight, X, ZoomIn, ShieldCheck, MapPin } from 'lucide-react';
 
 interface OurProjectsProps {
   onOpenRFQ: (context?: string) => void;
@@ -13,11 +13,32 @@ export const EngineeringProjects: React.FC<OurProjectsProps> = ({ onOpenRFQ }) =
     <section id="projects" className="py-20 relative bg-[#090c15] border-t border-[#363b94]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         
-        {/* Section Heading exactly as on amaoso.com */}
-        <div className="text-center mb-12">
+        {/* Section Heading */}
+        <div className="text-center mb-12 space-y-3">
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1 rounded-full bg-emerald-950/50 border border-emerald-500/40 text-emerald-400 text-xs font-bold uppercase tracking-wider">
+            <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
+            <span>NDDC Approved Specifications</span>
+          </div>
           <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-white font-['Space_Grotesk'] tracking-tight">
             Our Projects
           </h2>
+          <p className="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
+            Proven community and infrastructure lighting installations across <strong className="text-white">Akwa Ibom</strong>, <strong className="text-white">Rivers</strong>, and <strong className="text-white">Delta State</strong>, engineered for extreme humidity and continuous all-night security.
+          </p>
+          <div className="flex flex-wrap items-center justify-center gap-2 pt-1">
+            <span className="inline-flex items-center space-x-1 px-3 py-1 rounded-lg bg-[#111526] border border-[#363b94]/40 text-slate-300 text-xs">
+              <MapPin className="w-3.5 h-3.5 text-[#e03a45]" />
+              <span>Akwa Ibom Communities</span>
+            </span>
+            <span className="inline-flex items-center space-x-1 px-3 py-1 rounded-lg bg-[#111526] border border-[#363b94]/40 text-slate-300 text-xs">
+              <MapPin className="w-3.5 h-3.5 text-[#e03a45]" />
+              <span>Rivers State Infrastructure</span>
+            </span>
+            <span className="inline-flex items-center space-x-1 px-3 py-1 rounded-lg bg-[#111526] border border-[#363b94]/40 text-slate-300 text-xs">
+              <MapPin className="w-3.5 h-3.5 text-[#e03a45]" />
+              <span>Delta State Roadways & Towns</span>
+            </span>
+          </div>
         </div>
 
         {/* Gallery strictly using the 7 photos from amaoso.com */}

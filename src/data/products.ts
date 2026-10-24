@@ -291,7 +291,9 @@ export const COMPANY_INFO = {
   patentsCount: '100+ Patents',
   housingMoldCount: '70+ Types of Lamp Housings',
   experienceYears: 17,
-  certifications: ['ISO 9001:2015', 'CE Certified', 'CB Certified', 'RoHS Compliant', 'SAA Approved', 'IP65 / IP66'],
+  certifications: ['NDDC Approved', 'ISO 9001:2015', 'CE Certified', 'CB Certified', 'RoHS Compliant', 'SAA Approved', 'IP65 / IP66'],
+  nddcApproved: true,
+  communityDeployments: ['Akwa Ibom State', 'Rivers State', 'Delta State'],
   phonePrimary: '09020008868',
   phoneSecondary: '08034096635',
   whatsappDirect: '2349020008868',
@@ -339,5 +341,9 @@ export const FAQS = [
   {
     q: 'What are your production and delivery capabilities?',
     a: 'With a daily production capacity of 5,000 to 10,000 units, we are fully capable of meeting your delivery schedules and quality requirements. Large orders can typically be completed within 15–30 days.'
+  },
+  {
+    q: 'Are your products NDDC approved and where have they been deployed?',
+    a: 'Yes, aMaoso solar lighting products are NDDC approved. Our high-efficiency luminaires and solar streetlights have been successfully deployed in various rural and urban communities across Akwa Ibom State, Rivers State, and Delta State, backed by our dedicated South-South regional warehouse in Warri, Delta State.'
   }
 ];

@@ -10,6 +10,12 @@ export const StatsBanner: React.FC = () => {
       subtext: 'Pioneering LED & Solar Since 2008'
     },
     {
+      icon: ShieldCheck,
+      value: 'NDDC Approved',
+      label: 'Community Electrification',
+      subtext: 'Akwa Ibom, Rivers & Delta State'
+    },
+    {
       icon: Layers,
       value: '70+ Types',
       label: 'Proprietary Molds',
@@ -29,12 +35,6 @@ export const StatsBanner: React.FC = () => {
     },
     {
       icon: Globe2,
-      value: '8+ Nations',
-      label: 'African Export Footprint',
-      subtext: 'Nigeria, Ghana, Kenya, Egypt & more'
-    },
-    {
-      icon: ShieldCheck,
       value: 'ISO 9001:2015',
       label: 'Certified Management',
       subtext: 'Full CE, CB, RoHS & SAA Approval'
