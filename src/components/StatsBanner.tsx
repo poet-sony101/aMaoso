@@ -34,10 +34,10 @@ export const StatsBanner: React.FC = () => {
       subtext: 'Rapid 15-30 Day Bulk Delivery'
     },
     {
-      icon: Globe2,
-      value: 'ISO 9001:2015',
-      label: 'Certified Management',
-      subtext: 'Full CE, CB, RoHS & SAA Approval'
+      icon: ShieldCheck,
+      value: '3-Yr Warranty',
+      label: 'Official Guarantee',
+      subtext: 'LM-79, LM-80 & ISO 9001 Certified'
     },
   ];
 

@@ -60,6 +60,14 @@ export const AboutSection: React.FC = () => {
               </div>
               <div className="flex items-center space-x-2 p-2.5 rounded-lg bg-[#111524] border border-[#363b94]/40">
                 <CheckCircle2 className="w-4 h-4 text-[#e03a45] shrink-0" />
+                <span>LM-79 & LM-80 Photometric Tested</span>
+              </div>
+              <div className="flex items-center space-x-2 p-2.5 rounded-lg bg-emerald-950/30 border border-emerald-500/30 text-emerald-300">
+                <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0" />
+                <span>3-Year Official Manufacturer Warranty</span>
+              </div>
+              <div className="flex items-center space-x-2 p-2.5 rounded-lg bg-[#111524] border border-[#363b94]/40">
+                <CheckCircle2 className="w-4 h-4 text-[#e03a45] shrink-0" />
                 <span>Specialized Lighting Testing Workshop</span>
               </div>
               <div className="flex items-center space-x-2 p-2.5 rounded-lg bg-[#111524] border border-[#363b94]/40 sm:col-span-2">

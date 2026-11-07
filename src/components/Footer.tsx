@@ -70,16 +70,19 @@ export const Footer: React.FC<FooterProps> = ({ onNavigate, onOpenRFQ }) => {
 
             <div className="pt-2 flex flex-wrap gap-2 text-[11px]">
               <span className="px-2.5 py-1 rounded-md bg-emerald-950/60 border border-emerald-500/50 text-emerald-300 font-semibold">
-                NDDC Approved
+                NDDC Compliant
+              </span>
+              <span className="px-2.5 py-1 rounded-md bg-[#363b94]/20 border border-[#363b94]/50 text-sky-300 font-semibold">
+                3-Year Warranty
               </span>
               <span className="px-2.5 py-1 rounded-md bg-[#111524] border border-[#363b94]/50 text-[#e03a45] font-semibold">
                 ISO 9001:2015
               </span>
               <span className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300 font-semibold">
-                CE / CB / RoHS
+                LM-79 / LM-80
               </span>
               <span className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-slate-300 font-semibold">
-                IP66 Waterproof
+                IP66 Ingress
               </span>
             </div>
           </div>

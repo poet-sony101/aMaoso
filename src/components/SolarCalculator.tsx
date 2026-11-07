@@ -16,25 +16,25 @@ export const SolarCalculator: React.FC<SolarCalculatorProps> = ({ onQuoteWithSpe
   const calculateRecommendation = () => {
     let poleSpacing = 30; // meters
     let recommendedWattage = '100W - 150W';
-    let modelName = 'Amaoso WA Series 120W All-In-One';
+    let modelName = 'Amaoso WSYTLD-120WA All-in-One Solar Luminaire';
     let targetLux = '15 - 25 Lux (Class M4/M5)';
-    let batteryCapacity = 'LiFePO4 12.8V 42Ah';
-    let solarPanelWatt = '140W Monocrystalline';
+    let batteryCapacity = 'LiFePO4 384 Wh (DC 3.2V)';
+    let solarPanelWatt = '110W Monocrystalline (25-Yr Lifespan)';
 
     if (projectType === 'highway') {
       poleSpacing = 35;
       recommendedWattage = '150W - 250W';
-      modelName = 'Amaoso WG Series 200W Split Highway Luminaire';
+      modelName = 'Amaoso WSYTLD-180WA All-in-One / WG Split Luminaire';
       targetLux = '25 - 40 Lux (Class M2/M3 Expressways)';
-      batteryCapacity = 'LiFePO4 12.8V 80Ah Deep-Cycle';
-      solarPanelWatt = '260W Monocrystalline';
+      batteryCapacity = 'LiFePO4 512 Wh (DC 3.2V)';
+      solarPanelWatt = '150W Monocrystalline';
     } else if (projectType === 'estate') {
       poleSpacing = 28;
       recommendedWattage = '80W - 120W';
-      modelName = 'Amaoso WA / WK Series 100W Integrated Solar';
+      modelName = 'Amaoso WSYTLD-100WA Integrated Solar Luminaire';
       targetLux = '12 - 20 Lux (Class P2/P3 Residential)';
-      batteryCapacity = 'LiFePO4 3.2V 60Ah';
-      solarPanelWatt = '100W Monocrystalline';
+      batteryCapacity = 'LiFePO4 320 Wh (DC 3.2V)';
+      solarPanelWatt = '90W Monocrystalline';
     } else if (projectType === 'compound') {
       poleSpacing = 25;
       recommendedWattage = '150W - 300W';

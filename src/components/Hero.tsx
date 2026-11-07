@@ -72,6 +72,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onOpenCalculator,
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" />
                 <span>NDDC APPROVED PRODUCT</span>
               </div>
+              <div className="inline-flex items-center space-x-1.5 px-3.5 py-1.5 rounded-full bg-[#363b94]/20 border border-[#363b94]/50 text-sky-300 text-xs font-bold tracking-wide shadow-sm">
+                <ShieldCheck className="w-3.5 h-3.5 text-sky-400" />
+                <span>3-YEAR OFFICIAL WARRANTY</span>
+              </div>
             </div>
 
             {/* Official Title from amaoso.com */}
@@ -88,10 +92,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onOpenCalculator,
               <p className="text-slate-400 text-sm">
                 With profound technical expertise, our company focuses on high-quality LED streetlights, floodlights, industrial & mining lights, as well as solar lighting solutions. Equipped with an advanced R&D department and a die-casting factory, our team has developed more than <strong>70 types of lamp housings</strong> and obtained over <strong>100 patents</strong>.
               </p>
-              <div className="p-3 rounded-xl bg-gradient-to-r from-emerald-950/40 to-[#111524] border border-emerald-500/30 text-xs text-slate-300 flex items-start space-x-2.5">
+              <div className="p-3 rounded-xl bg-gradient-to-r from-emerald-950/40 via-[#111524] to-[#111524] border border-emerald-500/30 text-xs text-slate-300 flex items-start space-x-2.5">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 shrink-0 mt-0.5" />
                 <span>
-                  <strong className="text-white">NDDC Approved Quality:</strong> aMaoso solar lighting systems are NDDC approved and actively lighting up community infrastructure across <strong className="text-emerald-300">Akwa Ibom</strong>, <strong className="text-emerald-300">Rivers</strong>, and <strong className="text-emerald-300">Delta State</strong>.
+                  <strong className="text-white">NDDC Approved & 3-Year Warranty:</strong> aMaoso solar lighting systems (WSYTLD Series) are NDDC compliant, LM-79/LM-80 laboratory tested, and actively illuminating community projects across <strong className="text-emerald-300">Akwa Ibom</strong>, <strong className="text-emerald-300">Rivers</strong>, and <strong className="text-emerald-300">Delta State</strong> with Philips SMD optics (200–220 lm/W) and Grade-A LiFePO4 batteries.
                 </span>
               </div>
             </div>
@@ -111,8 +115,8 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onOpenCalculator,
                 <p className="text-[11px] text-slate-300 font-semibold">Akwa Ibom • Rivers • Delta</p>
               </div>
               <div className="p-3 rounded-xl bg-[#111524] border border-[#363b94]/40 text-left">
-                <p className="text-cyan-400 font-black text-lg font-['Space_Grotesk']">100+ Patents</p>
-                <p className="text-[11px] text-slate-300 font-semibold">ISO 9001 / CE / CB</p>
+                <p className="text-sky-400 font-black text-lg font-['Space_Grotesk']">3-Yr Warranty</p>
+                <p className="text-[11px] text-slate-300 font-semibold">LM-79 • LM-80 • IP66</p>
               </div>
             </div>
 

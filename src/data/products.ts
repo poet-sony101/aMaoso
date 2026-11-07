@@ -23,38 +23,95 @@ export interface Product {
   image: string;
   realImage: string;
   isPopular?: boolean;
+  warranty?: string;
+  opticalDistribution?: string;
+  beamAngle?: string;
+  certificationsList?: string[];
+  modelsMatrix?: {
+    model: string;
+    solarPanel: string;
+    battery: string;
+    dimensions: string;
+    housing: string;
+    ingress: string;
+    lifetime: string;
+  }[];
 }
 
 export const PRODUCTS: Product[] = [
   {
     id: 'wa-series',
-    name: 'Amaoso WA LED Solar Street Light',
-    productNo: 'MSYTHLD-WA',
+    name: 'Amaoso All-in-One Solar Street Light',
+    productNo: 'WSYTLD-WA',
     category: 'street-light',
     categoryLabel: 'Solar Street Lights',
-    tagline: 'Class A Integrated Monocrystalline All-In-One Solar Street Light',
+    tagline: 'NDDC Compliant Integrated Monocrystalline All-In-One Solar Street Light (3-Year Warranty)',
     powerRange: '100W / 120W / 150W / 180W',
-    voltage: '3.2V / 6V / 18V',
-    chips: 'Bridgelux 3030 / 5050',
-    lumens: '200 - 220 lm/W High Lumen Output',
-    battery: 'Class A Brand New LiFePO4 Battery (2000 Cycles, 8-10 Years Lifespan)',
-    solarPanel: 'Class A High-Efficiency Monocrystalline Solar Panel',
-    cct: '3000K - 6500K Pure White / Daylight',
-    ipRating: 'IP65 Waterproof',
-    poleHeight: '6m - 12m',
-    chargingTime: '5 - 6 Hours Full Sunshine',
-    workingTime: '12h Bright, 4-5 Nights Rainy Backup Reserve',
-    material: 'Aviation Die-Cast Aluminum with SRNE Smart Controller',
-    description: 'Equipped with Bridgelux 3030 LED chips delivering 200-220 lm/W. Class A LiFePO4 battery pack with 2000 cycles and multi-protection against overcharge, overdischarge, and short circuits. Dual timer dimming mode and radar sensor mode.',
-    features: [
-      'Bridgelux 3030 / 5050 high lumen output up to 200-220 lm/W',
-      'Class A brand new LiFePO4 battery, 2000-time cycles, lifespan up to 8-10 years',
-      'IP65 SRNE smart controller for intelligent lighting management',
-      'Multi-protection against overcharge, overdischarge, and short circuit',
-      'Timer dimming mode or sensor mode: 12h bright with 4-5 nights backup',
-      'Class A high efficiency monocrystalline solar panel'
+    voltage: 'DC 3.2V Nominal Voltage',
+    chips: 'Philips SMD High-Efficacy LED Modules',
+    lumens: '200 – 220 lm/W High Luminous Efficacy',
+    battery: 'Grade-A LiFePO4 Battery Pack (320Wh – 512Wh, >2,600 Cycles, 10-Yr Life @ 90% DoD)',
+    solarPanel: 'High-Efficiency Monocrystalline Silicon (90W – 150W, 25-Year Lifespan)',
+    cct: '3000K – 6500K CCT (CRI > 70)',
+    ipRating: 'IP66 Ingress Protection',
+    poleHeight: '6m – 12m',
+    chargingTime: '4 – 6 Hours Unobstructed Sunlight',
+    workingTime: '12h All-Night Lighting with 4–5 Rainy/Cloudy Days Autonomous Backup',
+    material: 'Tensioned Aluminum Extrusions & Die-Cast Housing with Reinforced Sleeve Head Bracket',
+    warranty: '3-Year Manufacturer Warranty',
+    opticalDistribution: 'Type II Optical Roadway Distribution',
+    beamAngle: '140° × 70° Rectangular Batwing',
+    certificationsList: ['NDDC Compliant', '3-Year Warranty', 'LM-79', 'LM-80', 'ISO 9001:2015', 'CE', 'RoHS'],
+    modelsMatrix: [
+      {
+        model: 'WSYTLD-100WA',
+        solarPanel: '90W Monocrystalline',
+        battery: '320 Wh LiFePO4 (DC 3.2V)',
+        dimensions: '1080 × 360 × 50 mm',
+        housing: 'Die-Cast Alum. / PC',
+        ingress: 'IP66',
+        lifetime: '> 100,000 h'
+      },
+      {
+        model: 'WSYTLD-120WA',
+        solarPanel: '110W Monocrystalline',
+        battery: '384 Wh LiFePO4 (DC 3.2V)',
+        dimensions: '1196 × 360 × 50 mm',
+        housing: 'Die-Cast Alum. / PC',
+        ingress: 'IP66',
+        lifetime: '> 100,000 h'
+      },
+      {
+        model: 'WSYTLD-150WA',
+        solarPanel: '130W Monocrystalline',
+        battery: '448 Wh LiFePO4 (DC 3.2V)',
+        dimensions: '1579 × 386 × 50 mm',
+        housing: 'Die-Cast Alum. / PC',
+        ingress: 'IP66',
+        lifetime: '> 100,000 h'
+      },
+      {
+        model: 'WSYTLD-180WA',
+        solarPanel: '150W Monocrystalline',
+        battery: '512 Wh LiFePO4 (DC 3.2V)',
+        dimensions: '1679 × 386 × 50 mm',
+        housing: 'Die-Cast Alum. / PC',
+        ingress: 'IP66',
+        lifetime: '> 100,000 h'
+      }
     ],
-    recommendedUses: ['Municipal Highways', 'Residential Estates', 'Federal Trunk Roads', 'University Campuses'],
+    description: 'Equipped with Philips SMD high-efficacy chips delivering 200–220 lm/W and Type II (140° × 70°) optical distribution. Features Grade-A LiFePO4 battery pack (>2,600 cycles at 90% DoD), IP66-sealed intelligent MPPT controller with microwave radar daylight detection, and reinforced sleeve bracket. 100% NDDC compliant with 3-year warranty.',
+    features: [
+      'Philips SMD High-Efficacy Chips: Delivers luminous efficacy up to 200–220 lm/W with minimal energy draw',
+      'Grade-A LiFePO4 Battery Pack: >2,600 deep cycles and operational service life of up to 10 years at 90% DoD',
+      'Intelligent MPPT Controller: IP66-sealed smart controller with microwave radar and photocell daylight detection',
+      'Continuous All-Night Lighting: 12 hours active illumination with 4–5 rainy/cloudy days autonomous backup',
+      'High-Efficiency Photovoltaic Module: Monocrystalline silicon solar panel with up to a 25-year service lifespan',
+      'Type II Roadway Optics: 140° × 70° rectangular batwing distribution eliminating dark spots between poles',
+      'Chassis & Mounting: Tensioned aluminum extrusions & die-cast housing with high-strength reinforced sleeve bracket',
+      'Compliance & Warranty: NDDC Compliant, LM-79, LM-80, ISO 9001:2015, CE, RoHS with 3-Year Official Warranty'
+    ],
+    recommendedUses: ['Urban Streets', 'Highways', 'Arterial Roads', 'Commercial Parking Lots', 'Industrial Parks', 'Perimeter Security', 'Pathways', 'Public Gardens'],
     image: '/images/wa-series.png',
     realImage: '/images/wa-series-real.jpg',
     isPopular: true
@@ -291,8 +348,9 @@ export const COMPANY_INFO = {
   patentsCount: '100+ Patents',
   housingMoldCount: '70+ Types of Lamp Housings',
   experienceYears: 17,
-  certifications: ['NDDC Approved', 'ISO 9001:2015', 'CE Certified', 'CB Certified', 'RoHS Compliant', 'SAA Approved', 'IP65 / IP66'],
+  certifications: ['NDDC Compliant', '3-Year Official Warranty', 'LM-79', 'LM-80', 'ISO 9001:2015', 'CE Certified', 'CB Certified', 'RoHS Compliant', 'SAA Approved', 'IP66 Ingress'],
   nddcApproved: true,
+  warrantyYears: 3,
   communityDeployments: ['Akwa Ibom State', 'Rivers State', 'Delta State'],
   phonePrimary: '09020008868',
   phoneSecondary: '08034096635',
@@ -335,8 +393,8 @@ export const FAQS = [
     a: 'Lagos Amaoso Solar Technology Co., Ltd. has a complete management system and has passed the ISO9001:2015 quality management system certification. More importantly, our product quality has also passed CB, CE, ROHS, SAA, and other certifications.'
   },
   {
-    q: 'Do you provide after-sales service',
-    a: 'Yes, we provide a warranty for all the products we sell. If you encounter any after-sales issues due to product quality, please contact us.'
+    q: 'Do you provide after-sales service and warranty?',
+    a: 'Yes, aMaoso solar streetlights come with an official 3-Year Manufacturer Warranty. Our systems feature Grade-A LiFePO4 batteries rated for >2,600 deep cycles (up to 10-year service life at 90% DoD), Philips SMD LED modules with LM-79/LM-80 compliance, and IP66 ingress protection. Our engineering and after-sales support teams in Lagos and Warri provide direct replacement parts and technical assistance.'
   },
   {
     q: 'What are your production and delivery capabilities?',
