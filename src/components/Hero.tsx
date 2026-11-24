@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowRight, CheckCircle2, MessageCircle, ChevronLeft, ChevronRight, ShieldCheck } from 'lucide-react';
+import { ArrowRight, CheckCircle2, MessageCircle, ChevronLeft, ChevronRight, ShieldCheck, Play } from 'lucide-react';
 import { COMPANY_INFO } from '../data/products';
 
 interface HeroProps {
   onExploreProducts: () => void;
   onOpenCalculator: () => void;
   onOpenRFQ: () => void;
+  onWatchVideo?: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onOpenCalculator, onOpenRFQ }) => {
+export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onOpenCalculator, onOpenRFQ, onWatchVideo }) => {
   const [activeSlide, setActiveSlide] = useState(0);
 
   const heroBanners = [
@@ -121,10 +122,10 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onOpenCalculator,
             </div>
 
             {/* Action CTAs in Logo Colors */}
-            <div className="pt-2 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4">
+            <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
               <button
                 onClick={onExploreProducts}
-                className="w-full sm:w-auto px-7 py-3.5 rounded-xl bg-[#363b94] hover:bg-[#272a6e] text-white font-bold text-xs uppercase tracking-wider shadow-xl shadow-[#363b94]/30 transition-all flex items-center justify-center space-x-2 cursor-pointer border border-white/20"
+                className="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-[#363b94] hover:bg-[#272a6e] text-white font-bold text-xs uppercase tracking-wider shadow-xl shadow-[#363b94]/30 transition-all flex items-center justify-center space-x-2 cursor-pointer border border-white/20"
               >
                 <span>View All Products</span>
                 <ArrowRight className="w-4 h-4 stroke-[2.5]" />
@@ -137,14 +138,27 @@ export const Hero: React.FC<HeroProps> = ({ onExploreProducts, onOpenCalculator,
                 <span>Get Instant Quote</span>
               </button>
 
+              {onWatchVideo && (
+                <button
+                  type="button"
+                  onClick={onWatchVideo}
+                  className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-[#111526] hover:bg-[#1a2038] text-white border border-[#363b94]/60 font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center space-x-2 cursor-pointer group shadow-lg shadow-[#363b94]/20"
+                >
+                  <div className="w-5 h-5 rounded-full bg-[#c9313b] text-white flex items-center justify-center group-hover:scale-110 transition-transform">
+                    <Play className="w-2.5 h-2.5 fill-current ml-0.5" />
+                  </div>
+                  <span>Watch Field Video</span>
+                </button>
+              )}
+
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto px-5 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center space-x-2 transition-all shadow-lg shadow-emerald-600/20"
+                className="w-full sm:w-auto px-4 py-3.5 rounded-xl bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center justify-center space-x-2 transition-all shadow-lg shadow-emerald-600/20"
               >
                 <MessageCircle className="w-4 h-4" />
-                <span>WhatsApp Us</span>
+                <span>WhatsApp</span>
               </a>
             </div>
 

@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import { PROJECT_PHOTOS } from '../data/products';
-import { ArrowRight, X, ZoomIn, ShieldCheck, MapPin } from 'lucide-react';
+import { ArrowRight, X, ZoomIn, ShieldCheck, MapPin, Play, Sparkles, CheckCircle2 } from 'lucide-react';
 
 interface OurProjectsProps {
   onOpenRFQ: (context?: string) => void;
+  onWatchVideo?: () => void;
 }
 
-export const EngineeringProjects: React.FC<OurProjectsProps> = ({ onOpenRFQ }) => {
+export const EngineeringProjects: React.FC<OurProjectsProps> = ({ onOpenRFQ, onWatchVideo }) => {
   const [selectedPhoto, setSelectedPhoto] = useState<string | null>(null);
+  const [isPlayingInline, setIsPlayingInline] = useState(false);
 
   return (
     <section id="projects" className="py-20 relative bg-[#090c15] border-t border-[#363b94]/30">
@@ -41,8 +43,133 @@ export const EngineeringProjects: React.FC<OurProjectsProps> = ({ onOpenRFQ }) =
           </div>
         </div>
 
+        {/* Featured Live Field Video Proof Showcase */}
+        <div className="mb-14 p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#111526] via-[#0d1122] to-[#111526] border border-[#363b94]/50 shadow-2xl overflow-hidden relative">
+          <div className="absolute top-0 right-0 w-80 h-80 bg-[#363b94]/15 rounded-full blur-3xl pointer-events-none" />
+          
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center relative z-10">
+            {/* Left: Video Description & Engineering Facts */}
+            <div className="lg:col-span-7 space-y-4 text-center lg:text-left">
+              <div className="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-950/70 border border-emerald-500/40 text-emerald-300 text-xs font-bold uppercase tracking-wider">
+                <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
+                <span>Verified Field Footage • Night Inspection</span>
+              </div>
+
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-white font-['Space_Grotesk'] leading-tight">
+                Watch Live Roadway Illumination in Action
+              </h3>
+
+              <p className="text-slate-300 text-sm leading-relaxed">
+                Take a 60-second night drive through an active community corridor illuminated by our <strong>aMaoso WSYTLD-WA All-in-One Solar Streetlights</strong>. Witness the wide Type II optical distribution ($140^\circ \times 70^\circ$) casting uniform, high-lux illumination across the roadway with zero dark spots between poles.
+              </p>
+
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-2.5 pt-1 text-xs">
+                <div className="p-2.5 rounded-xl bg-[#090c15] border border-[#363b94]/40 text-left">
+                  <p className="text-[#e03a45] font-bold">100% Off-Grid</p>
+                  <p className="text-[11px] text-slate-400">Zero NEPA billing</p>
+                </div>
+                <div className="p-2.5 rounded-xl bg-[#090c15] border border-[#363b94]/40 text-left">
+                  <p className="text-emerald-400 font-bold">Type II Optics</p>
+                  <p className="text-[11px] text-slate-400">140° × 70° Batwing</p>
+                </div>
+                <div className="p-2.5 rounded-xl bg-[#090c15] border border-[#363b94]/40 text-left col-span-2 sm:col-span-1">
+                  <p className="text-sky-300 font-bold">NDDC Compliant</p>
+                  <p className="text-[11px] text-slate-400">3-Year Warranty</p>
+                </div>
+              </div>
+
+              <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-3">
+                <button
+                  type="button"
+                  onClick={() => {
+                    if (onWatchVideo) {
+                      onWatchVideo();
+                    } else {
+                      setIsPlayingInline(true);
+                    }
+                  }}
+                  className="px-6 py-3 rounded-xl bg-[#c9313b] hover:bg-[#a8252e] text-white font-bold text-xs uppercase tracking-wider transition-all flex items-center space-x-2 shadow-lg shadow-[#c9313b]/30 cursor-pointer"
+                >
+                  <Play className="w-4 h-4 fill-current" />
+                  <span>Play Full Video (60s)</span>
+                </button>
+
+                <button
+                  type="button"
+                  onClick={() => onOpenRFQ('Inquiry from Live Roadway Field Video')}
+                  className="px-5 py-3 rounded-xl bg-[#111526] hover:bg-[#1a2038] text-slate-200 border border-[#363b94]/50 font-bold text-xs uppercase tracking-wider transition-all flex items-center space-x-1.5 cursor-pointer"
+                >
+                  <span>Request Project Sizing</span>
+                  <ArrowRight className="w-4 h-4" />
+                </button>
+              </div>
+            </div>
+
+            {/* Right: Video Player Thumbnail or Inline Player */}
+            <div className="lg:col-span-5 flex justify-center">
+              <div className="relative rounded-2xl overflow-hidden border-2 border-[#363b94]/60 shadow-2xl bg-black max-w-xs sm:max-w-sm w-full aspect-[9/16] group">
+                {isPlayingInline ? (
+                  <video
+                    src="/videos/community-night-drive.mp4"
+                    poster="/images/video-poster.jpg"
+                    controls
+                    autoPlay
+                    playsInline
+                    className="w-full h-full object-cover"
+                  />
+                ) : (
+                  <div 
+                    onClick={() => {
+                      if (onWatchVideo) {
+                        onWatchVideo();
+                      } else {
+                        setIsPlayingInline(true);
+                      }
+                    }}
+                    className="relative w-full h-full cursor-pointer"
+                  >
+                    <img
+                      src="/images/video-poster.jpg"
+                      alt="aMaoso Solar Streetlight Night Drive Video Poster"
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent" />
+                    
+                    {/* Big pulsing play button */}
+                    <div className="absolute inset-0 flex items-center justify-center">
+                      <div className="w-16 h-16 rounded-full bg-[#c9313b] text-white flex items-center justify-center shadow-2xl shadow-[#c9313b]/60 group-hover:scale-110 transition-transform">
+                        <Play className="w-7 h-7 fill-current ml-1" />
+                      </div>
+                    </div>
+
+                    {/* Bottom overlay info */}
+                    <div className="absolute bottom-4 left-4 right-4 text-left space-y-1">
+                      <span className="px-2 py-0.5 rounded bg-emerald-950/80 text-emerald-300 text-[10px] font-bold border border-emerald-500/40">
+                        1:00 Min Night Drive
+                      </span>
+                      <p className="text-xs font-bold text-white">
+                        Community Roadway Illumination
+                      </p>
+                      <p className="text-[11px] text-slate-300">
+                        Click to watch full video
+                      </p>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* Gallery strictly using the 7 photos from amaoso.com */}
         <div className="relative mb-10">
+          <div className="text-center lg:text-left mb-6">
+            <h3 className="text-lg font-bold text-white font-['Space_Grotesk'] flex items-center justify-center lg:justify-start space-x-2">
+              <span>Project Assembly & Installation Gallery</span>
+              <span className="text-xs text-slate-400 font-normal">({PROJECT_PHOTOS.length} Authentic Photos)</span>
+            </h3>
+          </div>
+
           <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
             {PROJECT_PHOTOS.map((photo) => (
               <div

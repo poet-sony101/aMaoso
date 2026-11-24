@@ -11,11 +11,13 @@ import { SolarCalculator } from './components/SolarCalculator';
 import { ContactSection } from './components/ContactSection';
 import { Footer } from './components/Footer';
 import { RFQModal } from './components/RFQModal';
+import { VideoModal } from './components/VideoModal';
 
 export const App: React.FC = () => {
   const [rfqOpen, setRfqOpen] = useState(false);
   const [rfqInitialProduct, setRfqInitialProduct] = useState<string | undefined>();
   const [rfqInitialNotes, setRfqInitialNotes] = useState<string | undefined>();
+  const [videoOpen, setVideoOpen] = useState(false);
 
   const scrollToSection = (sectionId: string) => {
     const el = document.getElementById(sectionId);
@@ -51,6 +53,7 @@ export const App: React.FC = () => {
           onExploreProducts={() => scrollToSection('products')}
           onOpenCalculator={() => scrollToSection('calculator')}
           onOpenRFQ={() => handleOpenRFQ()}
+          onWatchVideo={() => setVideoOpen(true)}
         />
 
         {/* 17 Years, 70+ Lamp Housings, 100+ Patents, 5K-10K Units */}
@@ -69,6 +72,7 @@ export const App: React.FC = () => {
         {/* Our Projects: Real Factory Workshops & Assembly Photos */}
         <EngineeringProjects 
           onOpenRFQ={(context) => handleOpenRFQ(undefined, context)}
+          onWatchVideo={() => setVideoOpen(true)}
         />
 
         {/* About Us: Lagos Amaoso Solar Technology */}
@@ -98,6 +102,13 @@ export const App: React.FC = () => {
         onClose={() => setRfqOpen(false)}
         initialProduct={rfqInitialProduct}
         initialSpecsNote={rfqInitialNotes}
+      />
+
+      {/* Field Video Modal (60s Community Night Inspection) */}
+      <VideoModal
+        isOpen={videoOpen}
+        onClose={() => setVideoOpen(false)}
+        onOpenRFQ={() => handleOpenRFQ(undefined, 'Inquiry from Community Night Video Footage')}
       />
 
     </div>
